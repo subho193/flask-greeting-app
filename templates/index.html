@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FlaskApp</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKgUl-ZV-WJh1YV1ee7fHCy0qB7mJPjnZYg2lMMmha2SZY-SpgbwIMOtvGOoUesOyTN3E&usqp=CAU">
+	<br>
+	<form action="greet" method="post">
+		{%for message in get_flashed_messages()%}
+		<p>{{message}}</p>
+		{% endfor %}
+		<br>
+		<input type="text" name="name_input">
+		<br>
+		<input type="submit" value="Greet" id="greet">
+	</form>
+
+</body>
+</html>
